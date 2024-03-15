@@ -1,0 +1,36 @@
+{
+  "name": "webp-webpack-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/compiler.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "sharp": "^0.33.2",
+    "webpack": "^5.90.3"
+  },
+  "peerDependencies": {
+    "enhanced-resolve": "^5.15.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "ignore": [
+      "node_modules",
+      "test/*"
+    ]
+  }
+}
