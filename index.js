@@ -113,6 +113,11 @@ module.exports = class MagicWebpWebpackPlugin {
                 data.request,
                 supportExt
               );
+              // 不带 hash的 webp 不是本插件转换的 webp 说明本地已经有了 webp文件 直接跳过
+              const maybeExists = fs.existsSync(virtualWebpPath);
+              if (maybeExists) {
+                return;
+              }
               const matchedImg = await promisify(fs.readFile)(matchedPath);
               const matchedExt = getExt(matchedPath);
               // base64 逻辑处理
